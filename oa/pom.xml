@@ -49,16 +49,27 @@
 		    <version>3.4</version>
 		</dependency>
 		
+		<!-- proxool -->
+		<dependency>
+			<groupId>proxool</groupId>
+			<artifactId>proxool</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>proxool</groupId>
+			<artifactId>proxool-cglib</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
 		<!-- 数据库 -->
 		<dependency>
-		  <groupId>org.mybatis.spring.boot</groupId>
-		  <artifactId>mybatis-spring-boot-starter</artifactId>
-		  <version>1.2.0</version>
+		  	<groupId>org.mybatis.spring.boot</groupId>
+		  	<artifactId>mybatis-spring-boot-starter</artifactId>
+		  	<version>1.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		
 		<!-- 测试 -->
