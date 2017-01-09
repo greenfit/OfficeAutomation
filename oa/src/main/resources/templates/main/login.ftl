@@ -11,30 +11,9 @@
 		<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css">
 		<script src="/lib/jquery-3.1.1.js"></script>
 		<script src="/lib/layui/layui.js"></script>
-		<script src="/lib/layui/lay/dest/layui.all.js"></script>
-		<style type="text/css">
-			body{
-				background-image:url('/images/login.png');
-				padding-top: 100px;
-			}
-			.login{
-				width: 400px;
-				height: 500px;
-				padding-right: 50px;
-			    background-image:url('/images/login-bg.png');
-				background-position:top center;
-				background-repeat: no-repeat;
-				background-attachment: fixed;
-				background-position-y: 100px;
-			}
-			.login img{
-				margin-left: 45px;
-				width: 360px;
-				margin-top: 70px;
-			}
-		</style>
+		<script src="/lib/layui/lay/dest/layui.all.js"></script>			
 	</head>
-	<body>
+	<body class="login-body">
 		<center>
 			<div class="login">
 				<img src="/images/login-logo.png">

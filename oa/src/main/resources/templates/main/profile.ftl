@@ -11,11 +11,6 @@
 		<script src="/lib/jquery-3.1.1.js"></script>
 		<script src="/lib/layui/layui.js"></script>
 		<script src="/lib/layui/lay/dest/layui.all.js"></script>
-		<style type="text/css">
-			.layui-layedit{
-				height: 500px;
-			}
-		</style>
 	</head>
 	<body style="height:800px;">
 		<div class="layui-tab layui-tab-card" style="width: 99%;">
@@ -100,7 +95,6 @@
 					yes: function(index, layero){
 						var img = layer.getChildFrame('#url', index).val();
 						$("#picture").val(img);
-						//$("#imageView").attr('src', '${path}' + img);
 						layer.close(index);
 					}
 				}); 

@@ -21,7 +21,7 @@
 			<div class="nav-user">
 				<a target="BODY_FRAME" class="avatar" href="/profile.html">
 					<#if admin.picture?length &lt; 2>
-						<img src="static/images/100.gif">
+						<img src="/images/100.gif">
 					<#else>
 						<#if admin.picture?starts_with('http')>
 							<img src="${admin.picture}">
@@ -44,22 +44,7 @@
 								<i class="fa fa-puzzle-piece"></i> <cite>广告设置</cite>
 							</a>
 						</li>
-						<!-- <li class="layui-nav-item layui-nav-link">
-							<a onclick="change('link/index.html')"> 
-								<i class="fa fa-link"></i> <cite>链接设置</cite>
-							</a>
-						</li> -->
-						<li class="layui-nav-item layui-nav-link">
-							<a onclick="change('syn/index.html')"> 
-								<i class="fa fa-refresh"></i> <cite>同步设置</cite>
-							</a>
-						</li>
 						<li class="layui-nav-item layui-nav-title"><a>业务设置</a></li>
-						<li class="layui-nav-item layui-nav-link">
-							<a onclick="change('business/fund/info/index.html')"> 
-								<i class="fa fa-rocket"></i> <cite>基金设置</cite>
-							</a>
-						</li>
 						<li class="layui-nav-item layui-nav-link">
 							<a onclick="change('business/info/index.html')"> 
 								<i class="fa fa-wpforms"></i> <cite>信息设置</cite>
@@ -90,7 +75,7 @@
 				<iframe id="BODY_FRAME" name="BODY_FRAME" src="logs.html" frameborder="0" width="100%" height="99%"></iframe>
 			</div>
 			<div class="layui-footer" style="padding-top: 15px;height:30px;">
-			  <center><p>2016 © <a href="http://www.win-stock.com.cn/" target="_black">沈阳麟龙科技股份有限公司</a></p></center>
+			  <center><p>2017 © <a href="https://github.com/greenfit" target="_black">GreenFit 版权所有</a></p></center>
 			</div>
 		</div>
 		<script type="text/javascript">
