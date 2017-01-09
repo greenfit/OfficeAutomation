@@ -9,7 +9,7 @@ public class User {
 
     private String realname;
 
-    private String image;
+    private String picture;
     
     public User() {
     	setId(0);
@@ -47,11 +47,11 @@ public class User {
         this.realname = realname;
     }
 
-    public String getImage() {
-        return image;
-    }
+	public String getPicture() {
+		return picture;
+	}
 
-    public void setImage(String image) {
-        this.image = image;
-    }
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
 }

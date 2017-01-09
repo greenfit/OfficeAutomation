@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.helios.main.bean.Result;
 import com.helios.user.bean.User;
+import com.helios.user.service.UserService;
 
 /**
  * 首页控制器
@@ -19,6 +20,9 @@ import com.helios.user.bean.User;
  */
 @Controller
 public class MainController extends ApplicationController {
+	
+	@Autowired
+	public UserService userService;
 	
 	/**
 	 * 管理端首页. 
@@ -109,15 +113,15 @@ public class MainController extends ApplicationController {
 		Result result = new Result();
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-//		User user = userService.get(username, password);
-//		if(user == null) {
-//			result.setCode(-1);
-//			result.setMessage("用户名或密码错误!");
-//		} else{
-//			request.getSession().setAttribute("KEY_AUTHOR_SESSION", user);
-//			result.setCode(0);
-//			result.setMessage("");
-//		}
+		User user = userService.get(username, password);
+		if(user == null) {
+			result.setCode(-1);
+			result.setMessage("用户名或密码错误!");
+		} else{
+			request.getSession().setAttribute("KEY_AUTHOR_SESSION", user);
+			result.setCode(0);
+			result.setMessage("");
+		}
 		return result;
 	}
 	
@@ -159,7 +163,7 @@ public class MainController extends ApplicationController {
 		String username = request.getParameter("username");
 		String realname = request.getParameter("realname");
 		String password = request.getParameter("password");
-		String image = request.getParameter("image");
+		String picture = request.getParameter("picture");
 		
 		if(StringUtils.trimToNull(username) == null){
 			result.setCode(-1);
@@ -179,16 +183,16 @@ public class MainController extends ApplicationController {
 		
 		user.setUsername(username);
 		user.setRealname(realname);
-		user.setImage(image);
+		user.setPicture(picture);
 		
-//		boolean bol = userService.update(user);
-//		if(bol){
-//			result.setCode(0);
-//			result.setMessage("");
-//		}else{
-//			result.setCode(-1);
-//			result.setMessage("提交失败");
-//		}
+		boolean bol = userService.update(user);
+		if(bol){
+			result.setCode(0);
+			result.setMessage("");
+		}else{
+			result.setCode(-1);
+			result.setMessage("提交失败");
+		}
 		return result;
 	}
 }

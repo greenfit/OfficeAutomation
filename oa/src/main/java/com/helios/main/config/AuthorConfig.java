@@ -6,6 +6,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import com.helios.main.interceptor.AuthorInterceptor;
 
+/**
+ * 访问权限的配置项
+ */
 @Configuration
 public class AuthorConfig extends WebMvcConfigurerAdapter {
 	

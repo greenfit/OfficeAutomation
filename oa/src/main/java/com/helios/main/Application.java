@@ -2,8 +2,10 @@ package com.helios.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("com.helios")
 public class Application {
 	
 	public static void main(String[] args) {
