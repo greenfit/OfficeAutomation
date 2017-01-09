@@ -4,36 +4,40 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>SEO优化管理端</title>
+		<title>SpringBoot</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="${request.contextPath}/static/lib/layui/css/layui.css">
-		<link rel="stylesheet" href="${request.contextPath}/static/css/style.css">
-		<link rel="stylesheet" href="${request.contextPath}/static/lib/font-awesome/css/font-awesome.css">
-		<script src="${request.contextPath}/static/lib/jquery-3.1.1.js"></script>
-		<script src="${request.contextPath}/static/lib/layui/layui.js"></script>
-		<script src="${request.contextPath}/static/lib/layui/lay/dest/layui.all.js"></script>
+		<link rel="stylesheet" href="/lib/layui/css/layui.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css">
+		<script src="/lib/jquery-3.1.1.js"></script>
+		<script src="/lib/layui/layui.js"></script>
+		<script src="/lib/layui/lay/dest/layui.all.js"></script>
 		<style type="text/css">
 			body{
-				background-image:url('${request.contextPath}/static/images/login.jpg');
+				background-image:url('/images/login.png');
+				padding-top: 100px;
+			}
+			.login{
+				width: 400px;
+				height: 500px;
+				padding-right: 50px;
+			    background-image:url('/images/login-bg.png');
 				background-position:top center;
 				background-repeat: no-repeat;
 				background-attachment: fixed;
-				min-width: 500px;
-			}
-			.login{
-				width: 380px;
-			    margin-left: -50px;
-			    margin-top: 110px;
+				background-position-y: 100px;
 			}
 			.login img{
 				margin-left: 45px;
+				width: 360px;
+				margin-top: 70px;
 			}
 		</style>
 	</head>
 	<body>
 		<center>
 			<div class="login">
-				<img style="width: 320px;" src="${request.contextPath}/static/images/logo.png">
+				<img src="/images/login-logo.png">
 				<div class="layui-form-item">
 					<label class="layui-form-label">用户名</label>
 					<div class="layui-input-block">

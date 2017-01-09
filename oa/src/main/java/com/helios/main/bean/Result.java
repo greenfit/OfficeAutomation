@@ -2,7 +2,8 @@ package com.helios.main.bean;
 
 import java.io.Serializable;
 
-import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Result implements Serializable {
 	
@@ -24,6 +25,11 @@ public class Result implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return JSON.toJSONString(this);
+		ObjectMapper mapper = new ObjectMapper();
+		try {
+			return mapper.writeValueAsString(this);
+		} catch (JsonProcessingException e) {
+			return String.format("{ \"code\" : %s , \"message\" : \"%s\"}", getCode(), getMessage());
+		}
 	}
 }

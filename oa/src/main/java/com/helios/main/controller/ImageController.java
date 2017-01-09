@@ -8,9 +8,8 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,12 +27,9 @@ import com.helios.main.bean.Result;
  */
 @Controller
 @RequestMapping("image")
-public class ImageController {
+public class ImageController extends ApplicationController {
 	
 	private static Logger logger = Logger.getLogger(ImageController.class);
-	
-	@Value("#{configProperties.image_host}")
-	private String imageHost;
 	
 	/**
 	 * 上传图片的界面.
@@ -44,13 +40,7 @@ public class ImageController {
 	@RequestMapping(value = "add.html")
 	public ModelAndView addImage(HttpServletRequest request){
 		ModelAndView modelAndView = new ModelAndView("image/add");
-		String host;
-		if(StringUtils.trimToNull(imageHost) == null || imageHost.equalsIgnoreCase("CONTEXT")){
-			host = request.getContextPath() + "/upload/";
-		}else{
-			host = imageHost + "/";
-		}
-		modelAndView.addObject("host", host);
+		modelAndView.addObject("host", config.getImageHost());
 		modelAndView.addObject("path", request.getParameter("path"));
 		return modelAndView;
 	}
@@ -76,12 +66,7 @@ public class ImageController {
 			String name = UUID.randomUUID().toString().replaceAll("-", "");
 			boolean bol = saveFile(dir, name, upload);
 			if(bol){
-				String filepath;
-				if(StringUtils.trimToNull(imageHost) == null || imageHost.equalsIgnoreCase("CONTEXT")){
-					filepath = request.getContextPath() + "/upload/" + path + name;
-				}else{
-					filepath = imageHost + "/" + path + name;
-				}
+				String filepath = config.getImageHost() + "/" + path + name;
 				buffer.append("window.parent.CKEDITOR.tools.callFunction(" + CKEditorFuncNum + ",'" + filepath + "');");
 			}else{
 				buffer.append("window.parent.CKEDITOR.tools.callFunction(" + CKEditorFuncNum + ",'', '文件复制失败!');");

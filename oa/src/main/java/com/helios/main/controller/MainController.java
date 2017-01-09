@@ -2,9 +2,8 @@ package com.helios.main.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,7 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.helios.main.bean.Result;
 import com.helios.user.bean.User;
-import com.helios.user.service.UserService;
 
 /**
  * 首页控制器
@@ -20,13 +18,7 @@ import com.helios.user.service.UserService;
  * @author liyu
  */
 @Controller
-public class MainController {
-	
-	@Autowired
-	public UserService userService;
-	
-	@Value("#{configProperties.image_host}")
-	private String imageHost;
+public class MainController extends ApplicationController {
 	
 	/**
 	 * 管理端首页. 
@@ -35,8 +27,6 @@ public class MainController {
 	public ModelAndView toIndex(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView("main/index");
 		modelAndView.addObject("admin", request.getSession().getAttribute("KEY_AUTHOR_SESSION"));
-		modelAndView.addObject("imageHost", imageHost);
-		modelAndView.addObject("debug", request.getParameter("debug"));
 		return modelAndView;
 	}
 	
@@ -119,15 +109,15 @@ public class MainController {
 		Result result = new Result();
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		User user = userService.get(username, password);
-		if(user == null) {
-			result.setCode(-1);
-			result.setMessage("用户名或密码错误!");
-		} else{
-			request.getSession().setAttribute("KEY_AUTHOR_SESSION", user);
-			result.setCode(0);
-			result.setMessage("");
-		}
+//		User user = userService.get(username, password);
+//		if(user == null) {
+//			result.setCode(-1);
+//			result.setMessage("用户名或密码错误!");
+//		} else{
+//			request.getSession().setAttribute("KEY_AUTHOR_SESSION", user);
+//			result.setCode(0);
+//			result.setMessage("");
+//		}
 		return result;
 	}
 	
@@ -191,14 +181,14 @@ public class MainController {
 		user.setRealname(realname);
 		user.setImage(image);
 		
-		boolean bol = userService.update(user);
-		if(bol){
-			result.setCode(0);
-			result.setMessage("");
-		}else{
-			result.setCode(-1);
-			result.setMessage("提交失败");
-		}
+//		boolean bol = userService.update(user);
+//		if(bol){
+//			result.setCode(0);
+//			result.setMessage("");
+//		}else{
+//			result.setCode(-1);
+//			result.setMessage("提交失败");
+//		}
 		return result;
 	}
 }
