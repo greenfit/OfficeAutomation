@@ -1,0 +1,47 @@
+/* 登陆页面  */
+.login-body{padding-top: 100px;background-image:url('/images/login-bg.png');background-position:top center;background-repeat: no-repeat;background-attachment: fixed;}
+.login{width: 400px;height: 500px;padding-right: 50px;}
+.login img{margin-left: 45px;width: 360px;}
+
+/* 首页 */
+.nav-user{position:absolute; top: 12px; right:0; z-index: 2000;}
+.nav-user span, 
+.nav-user .unlogin, 
+.out-login,
+.avatar,
+.avatar *,
+.nav-user .nav{display:inline-block; vertical-align: middle; *display: inline; *zoom:1;}
+.nav-user .unlogin{margin-right: 10px; margin-top: 8px;}
+.nav-user span{position: relative;}
+.nav-user span a{padding:0 10px; color:#A9B7B7}
+.nav-user span a:hover{color:#fff;}
+.nav-user .nav{position:relative; top: -2px; left: auto; right: 0; margin-left: 10px;}
+.nav-user .nav a{padding: 0 10px; font-size: 15px;}
+.nav-user .nav a i{padding-right: 10px;}
+.nav-user .unlogin i{margin-bottom: 12px;}
+.avatar{ color:#A9B7B7; font-size:14px;}
+.avatar img{ width: 42px; height: 42px; border-radius:100%;}
+.avatar cite, .avatar i{margin-left: 10px}
+.avatar i{line-height: 20px; color: #FF7200;}
+.header-logo{max-height: 63px;}
+.layui-nav-item .fa{padding-right: 10px;}
+.layui-nav-link{cursor: pointer;}
+.layui-nav-title{cursor: no-drop;}
+
+/* 其他页面 */
+.site-table{width: 100%; margin: 10px 0;}
+.site-table thead{background-color:#f2f2f2; }
+.site-table th, 
+.site-table td{padding: 6px 15px; min-height: 20px; line-height: 20px; border:1px solid #ddd; font-size: 14px; font-weight: 400;}
+.site-table tr:nth-child(even){background: #fbfbfb;}
+.area-input {height:500px; width: 600px;resize: none;}
+.layui-input-text {float: left;top: -27px;position: relative;left: 410px;font-size: 12px;color: #999;height: 0px;}  
+.layui-input-button {float: left;top: -38px;position: relative;left: 410px;font-size: 12px;color: #999;height: 0px;}  
+.layui-layedit{width: 700px;}
+.layui-add-div{position: absolute;right: 0px;top: 240px;}
+.font-red{color: #F00;}
+.layui-ckeditor{width: 700px;}
+.layui-query-inline{width: 350px;}
+.layui-elem-field{width: 760px;}
+.query-button{margin-left: 240px;}
+.layui-textarea{width: 700px;resize: none;}

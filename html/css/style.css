@@ -1,0 +1,237 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body{
+  overflow: hidden;
+  background: url(../image/index-bg-1.jpeg);
+}
+
+/* 内容面板的APP */
+.container .app{
+  position: absolute;
+  width: 200px;
+  height: 300px;
+}
+
+.container .app .head{
+  width: 100%;
+  height: 30px;
+  color: #fff;
+  background-color: #6798ee;
+  cursor: all-scroll;
+  border: 1px solid #6798ee;
+}
+
+.container .app .head .icon{
+  position: absolute;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+
+.container .app .head .operate{
+  position: absolute;
+  font-size: 23px;
+  text-align: center;
+  cursor: default;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+}
+
+.container .app .head .operate:hover{
+  background-color:#85acf1;
+}
+
+.container .app .head .title{
+  position: absolute;
+  left: 35px;
+  padding-top: 5px;
+}
+
+.container .app .panel{
+  background-color: #fff;
+  border: 1px solid #6798ee;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 系统的任务栏 */
+.os-bar{
+  width : 100%;
+  height: 45px;
+  position: fixed;
+  bottom: 0px;
+  background-color: #6798ee;  
+  z-index: 99999999;
+}
+
+.os-bar .active{
+  background-color:#85acf1;
+}
+
+.os-bar .start{
+  position: absolute;
+  height: 100%;
+  padding: 8px 12px 0 10px;
+  font-size: 26px;
+  color: #fff;
+}
+
+.os-bar .start:hover{
+  color: #bdd5ff;
+  background-color:#85acf1;
+}
+
+.os-bar .apps{
+  position: absolute;
+  height: 45px;
+  left: 45px;
+  color: #fff;
+  font-size: 25px;
+  cursor: default;
+}
+
+.os-bar .app{
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 100%;
+  padding: 10px 5px 0px 5px;
+  text-align: center;
+}
+
+.os-bar .app:hover{
+  background-color:#85acf1;
+}
+
+.os-bar .timer{
+  position: absolute;
+  right: 0px;
+  width: 125px;
+  height: 45px;
+  cursor: default;
+  color: #fff;
+}
+
+.os-bar .timer:hover{
+  background-color:#85acf1;
+}
+
+.os-bar .timer .bar-time{
+  position: absolute;
+  right: 28px;
+  top: 5px;
+}
+
+.os-bar .timer .bar-date{
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
+
+/* 开始菜单 */
+.start-menu{
+  display: none;
+  position: absolute;
+  left: 0px;
+  bottom: 45px;
+  color: #fff;
+  background-color: #85acf1;
+  width: 300px;
+  height: 600px;
+  z-index: 99999999;
+}
+
+.start-menu i {
+  margin: 0px 6px;
+  font-size: 20px;
+  width: 20px;
+}
+
+.start-menu div{
+  height: 45px;
+  margin: 5px 5px 0 5px;
+  padding: 3px 3px 0 3px;
+  cursor: default;
+}
+
+.start-menu div:hover{
+  background-color: #6798ee;
+}
+
+.start-menu .user{
+}
+
+.start-menu .user img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #3065c3;
+}
+
+.start-menu .user span{
+  position: absolute;
+  top: 20px;
+  left: 60px;
+}
+
+.start-menu .apps{
+  height: 200px;
+}
+
+.start-menu .apps:hover{
+  background-color: #85acf1;
+}
+
+.start-menu .apps span{
+  color:#333;
+}
+
+.start-menu .apps li{
+  height: 22px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.start-menu .apps li:hover{
+  background-color: #6798ee;
+}
+
+.start-menu .tasks{
+  height: 165px;
+}
+
+.start-menu .tasks:hover{
+  background-color: #85acf1;
+}
+
+.start-menu .tasks span{
+  color:#333;
+}
+
+.start-menu .tasks li{
+  height: 22px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.start-menu .tasks li:hover{
+  background-color: #6798ee;
+}
+
+.start-menu .setting{
+  line-height: 40px;
+}
+
+.start-menu .exit{
+  line-height: 40px;
+}
+
+.start-menu .all{
+  line-height: 40px;
+}
